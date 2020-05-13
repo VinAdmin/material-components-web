@@ -82,6 +82,12 @@
   @include sort-icon-color(variables.$sort-icon-color, $query: $query);
   @include sort-icon-active-color(variables.$sort-icon-active-color, $query: $query);
 
+  .mdc-data-table__table-container {
+    @include feature-targeting-mixins.targets($feat-structure) {
+      overflow-x: auto;
+    }
+  }
+
   .mdc-data-table__table {
     @include feature-targeting-mixins.targets($feat-structure) {
       min-width: 100%; // Makes table full-width of its container (Firefox / IE11)
